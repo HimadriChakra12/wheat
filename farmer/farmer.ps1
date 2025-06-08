@@ -8,7 +8,7 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     exit
 }
 mkdir C:/farm
-iwr -uri "https://github.com/HimadriChakra12/wheat/releases/download/0.1.0/wheat.exe" -Outfile "$env:TEMP/wheat.exe"
+iwr -uri "https://github.com/HimadriChakra12/wheat/releases/download/v0.1.0/wheat.exe" -Outfile "$env:TEMP/wheat.exe"
 copy-item "$env:TEMP/wheat.exe" "C:/farm/wheat.exe"
 $path = "C:/farm"
 try{
