@@ -1,5 +1,5 @@
 # Wheat
-A package manager for HimadriChakra12 softwares[farm]. No setup file so automatically installs easily.
+A package manager for HimadriChakra12 softwares[wheat]. No setup file so automatically installs easily.
 
 ## Installation
 Just copy and paste to powershell
