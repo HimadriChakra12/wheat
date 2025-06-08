@@ -4,13 +4,13 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     [Security.Principal.WindowsBuiltInRole] "Administrator")) {
     #if not it will run the command on admin
     Write-Warning "Running this script as Administrator!"
-    Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command "iwr -useb "https://tinyurl.com/hhyphw" | iex ; exit "' -Verb RunAs
+    Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command "iwr -useb "https://tinyurl.com/hwheat" | iex ; exit "' -Verb RunAs
     exit
 }
-mkdir C:/mwshrooms
-iwr -uri "https://github.com/HimadriChakra12/hyphw/releases/download/0.1.0/hyphw.exe" -Outfile "$env:TEMP/hyphw.exe"
-copy-item "$env:TEMP/hyphw.exe" "C:/mwshrooms/hyphw.exe"
-$path = "C:/mwshrooms"
+mkdir C:/farm
+iwr -uri "https://github.com/HimadriChakra12/wheat/releases/download/0.1.0/wheat.exe" -Outfile "$env:TEMP/wheat.exe"
+copy-item "$env:TEMP/wheat.exe" "C:/farm/wheat.exe"
+$path = "C:/farm"
 try{
     $currentPath = [Environment]::GetEnvironmentVariable("Path", "User")
     if ($currentPath -notlike "*$path*"){
@@ -22,4 +22,4 @@ try{
 } catch {
     Write-Error "Error adding mingw to path: $($_.Exception.Message)"
 }
-mkdir C:/mwshrooms/hyphws
+mkdir C:/farm/wheats
