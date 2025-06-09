@@ -8,17 +8,19 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 
 $path = "C:/farm/wheats/wnvsh"
 
-$url = "https://github.com/HimadriChakra12/wnvsh/releases/download/1.0.0/wnvsh.exe" 
-$outfile = "$env:TEMP/wnvsh.exe" 
-$file = "C:/farm/wheats/wnvsh/wnvsh.exe"
+$docs = @(
+    @{url = "https://github.com/HimadriChakra12/wnvsh/releases/download/1.0.0/wnvsh.exe" ; outfile = "$env:TEMP/wnvsh.exe"; file = "C:/farm/wheats/wnvsh/wnvsh.exe"}
+)
 
 if (-not (test-path $path)){
     mkdir $path | out-null
 }
 
 
-iwr -uri $url -OutFile $outfile 
-copy-item $outfile $file -force
+foreach ($doc in $docs){
+    iwr -uri $doc.url -OutFile $doc.file 
+    copy-item $doc.outfile $doc.file -force
+}
 
 try{
     $currentPath = [Environment]::GetEnvironmentVariable("Path", "User")
