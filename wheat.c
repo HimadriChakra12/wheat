@@ -4,7 +4,7 @@
 
 void run_ps_script_from_url(const char *script_name) {
     char command[1024];
-    const char *base_url = "https://github.com/HimadriChakra12/hyphw/raw/refs/heads/master/mashrooms/";
+    const char *base_url = "https://github.com/HimadriChakra12/wheat/raw/refs/heads/master/seeds/";
 
     snprintf(command, sizeof(command),
              "powershell -NoProfile -ExecutionPolicy Bypass -Command \"iwr -useb '%s%s' | iex\"",
@@ -15,12 +15,12 @@ void run_ps_script_from_url(const char *script_name) {
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {
-        printf("\033[1;33mUsage: hyphw install <script>\nor:    hyphw list\033[0m\n");
+        printf("\033[1;33mUsage: wheat install <script>\nor:    wheat list\033[0m\n");
         return 1;
     }
 
     if (strcmp(argv[1], "list") == 0) {
-        run_ps_script_from_url("mashrooms.ps1");
+        run_ps_script_from_url("seeds.ps1");
     } else if (strcmp(argv[1], "install") == 0 && argc >= 3) {
         char script_file[256];
         snprintf(script_file, sizeof(script_file), "%s.ps1", argv[2]);

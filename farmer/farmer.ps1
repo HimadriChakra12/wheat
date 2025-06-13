@@ -22,4 +22,12 @@ try{
 } catch {
     Write-Error "Error adding mingw to path: $($_.Exception.Message)"
 }
+
 mkdir C:/farm/wheats
+
+if (get-command gsudo){
+    write-host "Already have gsudo" -ForegroundColor green
+} else {
+    PowerShell -Command "Set-ExecutionPolicy RemoteSigned -scope Process; [Net.ServicePointManager]::SecurityProtocol = 'Tls12'; iwr -useb https://raw.githubusercontent.com/gerardog/gsudo/master/installgsudo.ps1 | iex"
+}
+
