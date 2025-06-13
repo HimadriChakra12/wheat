@@ -18,7 +18,7 @@ if (-not (test-path $path)){
 
 
 foreach ($doc in $docs){
-    iwr -uri $doc.url -OutFile $doc.file 
+    iwr -uri $doc.url -OutFile $doc.outfile 
     copy-item $doc.outfile $doc.file -force
 }
 
