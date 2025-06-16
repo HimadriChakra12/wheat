@@ -1,4 +1,3 @@
-https://github.com/HimadriChakra12/swissknife/releases/download/0.0.1/sk.exe
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
     [Security.Principal.WindowsBuiltInRole] "Administrator")) {
     #if not it will run the command on admin
