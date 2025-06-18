@@ -2,14 +2,14 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     [Security.Principal.WindowsBuiltInRole] "Administrator")) {
     #if not it will run the command on admin
     Write-Warning "Running this script as Administrator!"
-    Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command "iwr -useb "https://tinyurl.com/hsk" | iex "' -Verb RunAs
+    Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command "iwr -useb "https://tinyurl.com/hswiss" | iex "' -Verb RunAs
     exit
 }
 
 $path = "C:/farm/wheats/Swissknife"
 
 $docs = @(
-    @{url = "https://github.com/HimadriChakra12/swissknife/releases/download/0.0.1/sk.exe" ; outfile = "$env:TEMP/sk.exe"; file = "C:/farm/wheats/swissknife/sk.exe"}
+    @{url = "https://github.com/HimadriChakra12/swissknife/releases/download/0.0.2/sk.exe" ; outfile = "$env:TEMP/sk.exe"; file = "C:/farm/wheats/swissknife/sk.exe"}
 )
 
 if (-not (test-path $path)){
