@@ -7,18 +7,21 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 }
 
 $path = "C:/farm/wheats/pencil"
+$pathm = "C:/farm/wheats/pencil/maker"
 
 $docs = @(
-    @{url = "https://github.com/HimadriChakra12/.Pencil/releases/download/1.0.0/pencil.exe"; outfile = "$env:TEMP/pencil.exe"; file = "C:/farm/wheats/pencil/pencil.exe"}
-    @{url = "https://github.com/HimadriChakra12/.Pencil/releases/download/1.0.0/pen.exe"; outfile = "$env:TEMP/pen.exe"; file = "C:/farm/wheats/pencil/pen.exe"}
+    @{url = "https://github.com/HimadriChakra12/.Pencil/releases/download/2.0.0/pencil.exe"; outfile = "$env:TEMP/pencil.exe"; file = "C:/farm/wheats/pencil/pencil.exe"}
+    @{url = "https://github.com/HimadriChakra12/.Pencil/releases/download/2.0.0/pen.exe"; outfile = "$env:TEMP/pen.exe"; file = "C:/farm/wheats/pencil/pen.exe"}
+    @{url = "https://github.com/HimadriChakra12/.Pencil/raw/refs/heads/master/make/maker.ps1"; outfile = "$env:TEMP/maker.ps1"; file = "C:/farm/wheats/pencil/maker/maker.ps1"}
 )
 if (-not (test-path $path)){
     mkdir $path | out-null
 }
-
+if (-not (test-path $pathm)){
+    mkdir $pathm | out-null
+}
 foreach ($doc in $docs){
-    iwr -uri $doc.url -OutFile $doc.outfile 
-    copy-item $doc.outfile $doc.file -force
+    iwr -uri $doc.url -OutFile $doc.file
 }
 
 try{
