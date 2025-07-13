@@ -2,6 +2,6 @@ write-host "
 wnvsh
 pencil
 swissknife
-jux
+winwery
 firejockey
 "

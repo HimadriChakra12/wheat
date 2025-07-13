@@ -12,7 +12,9 @@ $docs = @(
     @{url = "https://github.com/HimadriChakra12/swissknife/releases/download/0.0.5/sk.exe" ; outfile = "$env:TEMP/sk.exe"; file = "C:/farm/wheats/swissknife/sk.exe"}
     @{url = "https://github.com/HimadriChakra12/.Pencil/releases/download/1.0.0/pencil.exe"; outfile = "$env:TEMP/pencil.exe"; file = "C:/farm/wheats/pencil/pencil.exe"}
     @{url = "https://github.com/HimadriChakra12/.Pencil/releases/download/1.0.0/pen.exe"; outfile = "$env:TEMP/pen.exe"; file = "C:/farm/wheats/pencil/pen.exe"}
-    @{url = "https://github.com/HimadriChakra12/jux/releases/download/0.0.1/jux.exe" ; outfile = "$env:TEMP/jux.exe"; file = "C:/farm/wheats/jux/jux.exe"}
+    @{url = "https://github.com/HimadriChakra12/winwery/releases/download/1.0.0/wry.exe" ; outfile = "$env:TEMP/wry.exe"; file = "C:/farm/wheats/winwery/wry.exe"}
+    @{url = "https://github.com/HimadriChakra12/swissknife/releases/download/1.0.0/sk.exe" ; outfile = "$env:TEMP/sk.exe"; file = "C:/farm/wheats/swissknife/sk.exe"}
+    @{url = "https://github.com/HimadriChakra12/firejockey/releases/download/0.0.1/firejockey.exe" ; outfile = "$env:TEMP/firejockey.exe"; file = "C:/farm/wheats/firejockey/firejockey.exe"}
 )
 
 if (-not (test-path $path)){
