@@ -9,7 +9,7 @@ $path = "C:/farm/wheats/wnvsh"
 
 $docs = @(
     @{url = "https://github.com/HimadriChakra12/wnvsh/releases/download/1.0.0/wnvsh.exe" ; outfile = "$env:TEMP/wnvsh.exe"; file = "C:/farm/wheats/wnvsh/wnvsh.exe"}
-    @{url = "https://github.com/HimadriChakra12/swissknife/releases/download/0.0.5/sk.exe" ; outfile = "$env:TEMP/sk.exe"; file = "C:/farm/wheats/swissknife/sk.exe"}
+    @{url = "https://github.com/HimadriChakra12/swissknife/releases/download/2.0.0/sk.exe" ; outfile = "$env:TEMP/sk.exe"; file = "C:/farm/wheats/swissknife/sk.exe"}
     @{url = "https://github.com/HimadriChakra12/.Pencil/releases/download/1.0.0/pencil.exe"; outfile = "$env:TEMP/pencil.exe"; file = "C:/farm/wheats/pencil/pencil.exe"}
     @{url = "https://github.com/HimadriChakra12/.Pencil/releases/download/1.0.0/pen.exe"; outfile = "$env:TEMP/pen.exe"; file = "C:/farm/wheats/pencil/pen.exe"}
     @{url = "https://github.com/HimadriChakra12/winwery/releases/download/1.0.0/wry.exe" ; outfile = "$env:TEMP/wry.exe"; file = "C:/farm/wheats/winwery/wry.exe"}
