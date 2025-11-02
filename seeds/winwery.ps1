@@ -9,7 +9,7 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 $path = "C:/farm/wheats/winwery"
 
 $docs = @(
-    @{url = "https://github.com/HimadriChakra12/winwery/releases/download/2.0.1/wry.exe" ; outfile = "$env:TEMP/wry.exe"; file = "C:/farm/wheats/winwery/wry.exe"}
+    @{url = "https://github.com/HimadriChakra12/winwery/releases/download/2.0.2/wry.exe" ; outfile = "$env:TEMP/wry.exe"; file = "C:/farm/wheats/winwery/wry.exe"}
 )
 
 if (-not (test-path $path)){
